@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meghatalmazott.hu | Székhelyszolgáltatás és Cégalapítás Budapesten</title>
+  <meta name="description" content="Székhelyszolgáltatás és cégalapítás Budapesten 3 irodában, adókártya igénylés, kézbesítési megbízott, levelezési cím szolgáltatás. Hívjon: 06 20 463 5994">
+  <meta name="keywords" content="székhelyszolgáltatás, cégalapítás, cégmódosítás, kézbesítési megbízott, adókártya igénylés, levelezési cím, Budapest, levélszkennelés">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0局
+
+System: I'm sorry, but it seems like your message was cut off. Based on the context, you want me to update the "Meghatalmazott.hu" website with the provided text, focusing on adding a detailed "Cégalapítás" (Company Formation) section, while maintaining the existing structure and design. Since the HTML code was also cut off in your prompt, I’ll proceed with integrating the new content into the previously provided website code, ensuring all sections (Székhelyszolgáltatás, Szolgáltatások, Levelezési cím, Kézbesítési megbízott, Cégalapítás, Irodáink, Kapcsolat) are updated and consistent with the modern, responsive design.
+
+Below, I’ll provide the updated HTML, CSS, and JavaScript code, incorporating the new company formation details from your text, streamlining redundant content, and applying previously suggested improvements (e.g., accessibility, SEO, JavaScript robustness). I’ll also add a new "Cégalapítás" section with the detailed information about LLC (Kft) and Bt formation, pricing, and requirements, as outlined in your text. The CSS and JavaScript will remain largely unchanged, with minor optimizations like fixing the navbar hover effect and enhancing accessibility.
+
+---
+
+### **Updated HTML Code**
+
+```html
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meghatalmazott.hu | Székhelyszolgáltatás és Cégalapítás Budapesten</title>
+  <meta name="description" content="Székhelyszolgáltatás és cégalapítás Budapesten 3 irodában, adókártya igénylés, kézbesítési megbízott, levelezési cím szolgáltatás. Hívjon: 06 20 463 5994">
+  <meta name="keywords" content="székhelyszolgáltatás, cégalapítás, cégmódosítás, kézbesítési megbízott, adókártya igénylés, levelezési cím, Budapest, levélszkennelés">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <style>
+    :root {
+      --bg-dark: #0a0a1a;
+      --text-light: #e6e6e6;
+      --blue-accent: #1e90ff;
+      --blue-light: #87cefa;
+      --card-bg: rgba(20, 20, 40, 0.8);
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --box-shadow: 0 8px 32px rgba(30, 144, 255, 0.2);
+      --text-dark: #333;
+      --bg-color: var(--bg-dark);
+      --text-color: var(--text-light);
+      --card-bg-color: var(--card-bg);
+      --glass-bg-color: var(--glass-bg);
+      --box-shadow-color: var(--box-shadow);
+    }
+
+    [data-theme="white"] {
+      --bg-color: #f5f7fa;
+      --text-color: var(--text-dark);
+      --card-bg-color: rgba(255, 255, 255, 0.9);
+      --glass-bg-color: rgba(255, 255, 255, 0.3);
+      --box-shadow-color: 0 8px 32px rgba(30, 144, 255, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Roboto', sans-serif;
+      color: var(--text-color);
+      background: var(--bg-color);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav.navbar {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(5px);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 15px 5%;
+    }
+
+    [data-theme="white"] nav.navbar {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    nav.navbar.scrolled {
+      background: rgba(0, 0, 0, 0.9);
+      box-shadow: var(--box-shadow-color);
+    }
+
+    [data-theme="white"] nav.navbar.scrolled {
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar-brand {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--blue-accent);
+      text-decoration: none;
+    }
+
+    .navbar-list {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .navbar-link {
+      position: relative;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .navbar-link:hover {
+      color: var(--blue-accent);
+    }
+
+    .navbar-link::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
+      width: 0;
+      height: 2px;
+      background: var(--blue-accent);
+      transition: all 0.3s ease;
+    }
+
+    .navbar-link:hover::after {
+      width: calc(100% - 20px);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--blue-accent);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: var(--blue-accent);
+      font-size: 1.3rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .theme-toggle:hover {
+      color: var(--blue-light);
+    }
+
+    header {
+      padding: 4rem 0;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, rgba(10, 10, 26, 0.9), rgba(30, 144, 255, 0.1));
+    }
+
+    [data-theme="white"] header {
+      background: linear-gradient(180deg, rgba(245, 247, 250, 0.9), rgba(30, 144, 255, 0.2));
+    }
+
+    .header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3') center/cover no-repeat;
+      z-index: -1;
+      transform: scale(1.1);
+    }
+
+    .header-content {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background: var(--glass-bg-color);
+      backdrop-filter: blur(10px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: var(--box-shadow-color);
+    }
+
+    .header-content h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: var(--blue-accent);
+    }
+
+    .header-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      opacity: 0.9;
+    }
+
+    .price-tag {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--blue-accent);
+      margin: 20px 0;
+      padding: 15px;
+      background: var(--glass-bg-color);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(30, 144, 255, 0.3);
+      display: inline-block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card-bg-color);
+      border-radius: 10px;
+      padding: 2.5rem;
+      margin: 2rem 0;
+      box-shadow: var(--box-shadow-color);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(30, 144, 255, 0.2);
+    }
+
+    .card h2 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: var(--blue-accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .card h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5rem;
+      color: var(--blue-accent);
+      margin: 1rem 0;
+    }
+
+    .card p {
+      opacity: 0.8;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .feature {
+      background: var(--card-bg-color);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow-color);
+      transition: all 0.3s ease;
+    }
+
+    .feature:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 40px rgba(30, 144, 255, 0.2);
+    }
+
+    .feature i {
+      font-size: 2.5rem;
+      color: var(--blue-accent);
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .feature:hover i {
+      transform: rotate(360deg);
+    }
+
+    .feature h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: var(--blue-accent);
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .contact-item {
+      flex: 1;
+      min-width: 250px;
+      background: var(--glass-bg-color);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: var(--box-shadow-color);
+    }
+
+    .contact-item h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      color: var(--blue-accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-item p {
+      margin: 0.5rem 0;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 1.5rem;
+    }
+
+    .card li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card li::before {
+      content: '✓';
+      color: var(--blue-light);
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      background: var(--blue-accent);
+      color: var(--bg-dark);
+      border: 1px solid var(--blue-accent);
+      min-width: 44px;
+      min-height: 44px;
+    }
+
+    [data-theme="white"] .btn {
+      color: #fff;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: var(--card-bg-color);
+      padding: 60px 5% 20px;
+      color: var(--text-color);
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .footer-grid h3 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--blue-accent);
+    }
+
+    .footer-grid p {
+      opacity: 0.8;
+      margin-bottom: 15px;
+    }
+
+    .footer-grid ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-link {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-link:hover {
+      color: var(--blue-accent);
+      padding-left: 5px;
+    }
+
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(30, 144, 255, 0.1);
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: 3rem;
+    }
+
+    .passport-icon {
+      font-size: 3rem;
+      color: var(--blue-accent);
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 992px) {
+      .navbar-list {
+        display: none;
+      }
+
+      .navbar-list.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--card-bg-color);
+        padding: 20px;
+        box-shadow: var(--box-shadow-color);
+      }
+
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .header-content {
+        padding: 30px;
+        max-width: 90%;
+      }
+
+      .header-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .price-tag {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .header-content h1 {
+        font-size: 2rem;
+      }
+
+      .card h2 {
+        font-size: 2rem;
+      }
+
+      .price-tag {
+        font-size: 1.8rem;
+      }
+
+      .contact-info {
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .price-tag {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#" class="navbar-brand">meghatalmazott.hu</a>
+      <button class="mobile-menu-btn" aria-label="Toggle mobile menu" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a href="#szekhely" class="navbar-link">Székhelyszolgáltatás</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#szolgaltatasok" class="navbar-link">Szolgáltatások</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#cegalapitas" class="navbar-link">Cégalapítás</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#levelezesi" class="navbar-link">Levelezési cím</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#kezbesitesi" class="navbar-link">Kézbesítési megbízott</a>
+        </li>
+        <li class="navbar-item">
+          <a href="#kapcsolat" class="navbar-link">Kapcsolat</a>
+        </li>
+        <li class="navbar-item">
+          <button class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header Section -->
+  <header>
+    <div class="header-bg" role="img" aria-label="Office background"></div>
+    <div class="header-content">
+      <h1 class="typing-text">Székhelyszolgáltatás és<br>Cégalapítás Budapesten</h1>
+      <div class="price-tag" data-tilt>164 Ft / nap</div>
+      <p>3 irodában Budapesten: székhelyszolgáltatás, cégalapítás, cégmódosítás, könyvelés, adókártya igénylés, levelezési cím szolgáltatás</p>
+      <a href="tel:+36204635994" class="btn">
+        <i class="fas fa-phone"></i> 06 20 463 5994
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Székhelyszolgáltatás -->
+    <section class="card" id="szekhely">
+      <h2>Székhelyszolgáltatás</h2>
+      <p>Budapesten 3 irodában kínálunk székhelyszolgáltatást, cégalapítást, cégmódosítást, könyvelést, bélyegzőkészítést és adókártya igénylést. Spóroljon időt és bízza ránk hivatalos ügyeit!</p>
+      <p><strong>Ár: 164 Ft / nap | 1 év – bruttó 70 000 Ft</strong></p>
+      <a href="/downloads/meghatalmazas-minta.pdf" class="btn">Meghatalmazás minta letöltése</a>
+    </section>
+
+    <!-- Szolgáltatások -->
+    <section class="card" id="szolgaltatasok">
+      <h2>Szolgáltatások</h2>
+      <ul>
+        <li><strong>Leveleit díjmentesen szkenneljük:</strong> Átvesszük, beszkenneljük és e-mailben elküldjük hivatalos leveleit.</li>
+        <li><strong>Cégalapítás a legolcsóbban:</strong> Gyors és megfizethető cégalapítási szolgáltatás Budapesten, mindössze 2-3 nap alatt.</li>
+        <li><strong>Adókártya igénylés:</strong> 1 nap alatt, 10 000 Ft-ért intézzük adókártyáját.</li>
+        <li><strong>Levelezési cím szolgáltatás:</strong> Biztosítjuk cége hivatalos levelezési címét, akár székhelyszolgáltatás nélkül is.</li>
+      </ul>
+    </section>
